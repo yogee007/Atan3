@@ -1,0 +1,33 @@
+body.darkSkin{background: #333 url('../img/footer.png');}
+	body.darkSkin #code h3{color:#fff;}
+	body.darkSkin #code .confForm span{color:#ddd;}
+	body.darkSkin #code .confForm label{color:#eee;}
+	body.darkSkin #code .confForm h4{color:#fff;}
+	body.darkSkin h1.title{color:#fff;}
+		body.darkSkin h1.title a{color:#fff;}
+
+
+body.responsive #code, body.responsive .demoPlate{margin-left:auto; margin-right:auto; float:none;}
+
+
+.help{float:right; height:31px; font-family:'PT Sans Narrow', sans-serif; text-decoration:none; background:#ffd800; border-radius:5px 0 0 5px; border-bottom:solid 1px #e9b572; padding:0 15px; line-height:31px; color:#4d281c; outline:0; text-shadow:0 1px 2px #fefe97; font-size:20px;}
+.help:hover{background:#ffe863; color:#d0451a;}
+
+.clr{clear:both;}
+h1.title{font-family:'PT Sans Narrow', sans-serif; font-weight:normal; margin:20px 0 0 11px;}
+	h1.title a{color:#000; text-decoration:none;}
+#code{float:left; margin:30px 50px; width:700px;}
+	#code h3{margin:20px 0 0.3em; font-family:'PT Sans Narrow', sans-serif; font-weight:normal;}
+	#code .cm-s-default{box-shadow: 0 1px 2px #000;}
+	.demoPlate{margin:30px 50px; float:right;}
+	
+	.confForm{display:table; float:left;}
+		.confForm h4{margin:0 0 0.5em; font-family:'PT Sans Narrow', sans-serif; font-weight:normal; text-decoration:underline; line-height:110%;}
+		.confForm input{margin:0 5px 0 0; vertical-align:text-bottom;}
+		.confForm label{line-height:15px; display:block; margin:0 0 8px 0px; color:#222;}
+		.confForm span{color:#333; font-size:80%;}
+	
+	#confStart{width:190px;}
+	#confControls{width:150px;}
+	#confEffects{width:180px;}
+	#confVinyl{width:180px;}

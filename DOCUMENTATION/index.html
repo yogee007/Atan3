@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Music Player Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<script src="http://plate.kuzenko.net/CC/config.js"></script>
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div id="configs"></div>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Coolest responsive Music Player & Shoutcast Stream&rdquo; Documentation by &ldquo;Kombinator&rdquo; v2.1.2</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Coolest responsive Music Player & Shoutcast Stream&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 20/12/2013<br>
+					By: Kombinator<br>
+					Email: <a href="mailto:youremail@yourdomain.com">studio@kuzenko.net</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my player. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/Kombinator">here</a> or my Skype - <b>kuzenko_net</b>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Step by step Instructions</h2>
+		<ol class="alpha">
+			<li><a href="#Uploading">Uploading</a></li>
+			<li><a href="#head">Head includes</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+
+			<li><a href="mailto:studio@kuzenko.net">If you need more snuff :)</a></li>
+		</ol>
+		
+		<hr>
+		
+		<p style="margin-left:-20px; font-size:110%">Please, <a href="http://codecanyon.net/downloads" target="_blank">rate us</a> and we’ll can delight you with good updates. Thanks! :)
+		</i></p>		
+		
+		<!--   ---------------------------ROW----------------------------------  -->
+		<h3 id="Uploading"><strong>A) First:</strong> Upload '/plate/' folder at your server - <a href="#toc">to top</a></h3>
+		<p>Upload only one folder (with all inside) from archive - /plate/ at your site directory.</p>
+		
+		<!--<p>By this way you will upload this css and JS file to your server (exclude js/jquery.js, if the latest version is existon your server and you can write manually path in "script" tag):</p>
+
+<pre>	plate/js/jquery.js
+	plate/js/jquery-ui.js
+	plate/js/juery.cookie.js
+	plate/js/juery.rotate.js
+	plate/js/perfect-scrollbar.js
+	plate/js/jquery.ui.touch-punch.min.js
+	plate/js/json2.js
+	plate/js/plate.js
+	
+	plate/css/plate.css
+	
+</pre>-->
+
+	<!--   ---------------------------ROW----------------------------------  -->
+	<hr>
+
+	<h3 id="head"><strong>B) Second:</strong> Include some files into HTML code</h3>
+		<p>Here is a html tags you have put near &lt;HEAD> tags  (required is only 1-3rd and 'plate.css' file)</p>
+
+<pre>	&lt;script src="plate/js/jquery.js">&lt;/script>
+	&lt;script src="plate/js/plate.js">&lt;/script>
+	&lt;link rel="stylesheet" href="plate/css/plate.css"/></pre>
+<pre>		&lt;script src="plate/js/jquery-ui.js">&lt;/script>
+		&lt;script src="plate/js/jquery.ui.touch-punch.min.js">&lt;/script>
+		&lt;script src="plate/js/jquery.cookie.js">&lt;/script>
+		&lt;script src="plate/js/perfect-scrollbar.js">&lt;/script>
+		&lt;script src="plate/js/jquery.rotate.js">&lt;/script>
+		&lt;!--[if lte IE 7]>&lt;script src="plate/js/json2.js">&lt;/script>&lt;![endif]-->
+</pre>
+
+
+		<!--   ---------------------------ROW----------------------------------  -->
+		<hr>
+		
+		<h3 id="javascript"><strong>B) Set the music</strong> - <a href="#toc">to top</a></h3>
+		
+		<p>This is a method for add songs if you want manually specify some things such as Band, Song Name, Duration, Cover path, etc<BR> 
+		Just past next code anywhere in the Html of your page:</p>
+		
+
+		
+<pre>	
+ &lt;script type="text/javascript">
+  $(function(){
+    $('#plate2').plate({
+	phpGetter: '/plate/php/plate.php', 	// way to directory with player files (if you upload not in Root dir)
+	lastFM_API_key: '645753db26e26465663a7be06260b60c', // Your lastfm API key for dynamic covers
+        playlist: [
+			//if you can specify all parameters
+            {"title":"Everything at Once ", "artist":"Lenka", "cover":"files/covers/1.jpg", "file":"files/everything_at_once.mp3"},
+            {"title":"Everything at Once ", "artist":"Lenka", "cover":"files/covers/1.jpg", "file":"files/everything_at_once.mp3"},
+           
+		    //or only file, player will try to load images and names
+			{"file":"files/files/lovesong.mp3"}
+        ]
+    });
+  });
+ &lt;/script>
+</pre>
+	
+	<!--   ---------------------------ROW----------------------------------  -->
+	<!--
+	<hr>
+	<p>So, next step is Very simple way to include player and list of songs into your site <BR>
+		Just write the path to media files on your server separate by comma like this:</p> 
+
+<pre>	&lt;div class="quickPlate">
+		files/everything_at_once.mp3,
+		files/pocketful_of_sunshine.mp3,
+		files/the_best_thing.mp3,
+		files/resistance.mp3
+	&lt;/div>
+
+</pre>	-->
+	
+
+	<!--   ---------------------------ROW----------------------------------  -->
+	<hr>
+
+	<p>Or even like this for scanning folder:</p> 
+<pre>	
+ &lt;script type="text/javascript">
+  $(function(){
+    $('#plate2').plate({
+	phpGetter: '/plate/php/plate.php', 	// way to directory with player files (if you upload not in Root dir)
+	lastFM_API_key: '645753db26e26465663a7be06260b60c', // Your lastfm API key for dynamic covers
+        playlist: [
+            {file:'folder:/music_folder/'} 	// must begins from slash /
+        ]
+    });
+  });
+ &lt;/script>
+</pre>		
+		
+	<!--   ---------------------------ROW----------------------------------  -->
+	<hr>
+
+	<p>If you want add Shoutcast radio:</p> 
+<pre>	
+ &lt;script type="text/javascript">
+  $(function(){
+    $('#plate2').plate({
+	phpGetter: '/plate/php/plate.php', // way to directory with player files (if you upload not in Root dir)
+	lastFM_API_key: '645753db26e26465663a7be06260b60c', // Your lastfm API key for dynamic covers
+        playlist: [
+           {file:'http://91.250.82.237:8004/;',artist:'Brazil', title:'POP Radio'}
+				// 2 characters - '/;' at the end is required for default
+        ]
+    });
+  });
+ &lt;/script>
+</pre>		
+		
+	<!--   ---------------------------ROW----------------------------------  -->
+		
+	<hr>
+		
+
+	<p><b>Or use our <a href="http://plate.kuzenko.net/config.php" target="_blank">online code generator</a></b></p>
+	<p> </p>
+
+		<p>And this code, where you want to be a player:</p>
+
+<pre>		&lt;div id="plate2">&lt;/div></pre>		
+		
+		
+		<!--   ---------------------------ROW----------------------------------  -->
+		
+		<p style="margin-left:-20px; font-size:110%"><i>If you enjoy it <a href="http://codecanyon.net/downloads" target="_blank">rate us</a> 5 stars. And we’ll can delight you with good updates. Thanks! :)
+		</i></p>
+		
+		<p>Once again, thank you so much for purchasing this Player. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the products on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Kuzenko IT</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

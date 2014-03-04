@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Plate 2.1.2</title>
+	
+	<!--REQUIRED FILES-->
+		<link rel="stylesheet" href="plate/css/plate.css">
+		<!--[if lte IE 7]><script src="plate/js/json2.js"></script><![endif]-->
+		<script src="plate/js/jquery.js"></script>
+		<script src="plate/js/jquery-ui.js"></script>
+		<script src="plate/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="plate/js/jquery.cookie.js"></script>
+		<script src="plate/js/perfect-scrollbar.js"></script>
+		<script src="plate/js/jquery.rotate.js"></script>
+		<script src="plate/js/plate.js"></script>
+	<!--REQUIRED FILES-->
+	<!--REQUIRED SCRIPT-->
+	<script>
+		$(function(){
+			$('.demoPlate.pl1').plate({
+				skin: 'light',
+				preloadFirstTrack: true,
+				coverEffects: ['opacity'],
+				phpGetter: '/plate/php/plate.php',
+				lastFM_API_key: '645753db26e26465663a7be06260b60c',
+				playlist: [
+					{file:'folder:/demo_files/media/music_folder/'}, // just upload music at this folder
+					{file:'/demo_files/media/resistance.mp3', altFile:'/demo_files/media/resistance.ogg'}, // altFile: it's for browsers which doesn't suppor mp3 (like opera, chromium and FF at Linux\Mac)
+					{file:'http://91.250.82.237:8004/;',artist:'Brazil', title:'POP Radio'},
+					{file:'/demo_files/media/pl.pls',artist:'Brazil',title:'Radio 3 pls'}, // u can use m3u
+					{file:'/demo_files/media/pl.m3u',artist:'m3u artist',title:'Radio 1 m3u'}, // and pls,acc+ playlists
+					{title: 'Hit the road Jack', artist: 'Anton Belyaev', file:'/demo_files/media/Hit the road Jack.mp3', cover:'/demo_files/media/belyaev.jpg', buyLink:'/'} // U can set 'buyLink' with your link to Itunes or another shop
+				]
+			});
+		});			
+	</script>
+	<noscript>Sorry, you're need browser which supports <a href="http://musicstorm.org/#nojs">JavaScript</a></noscript>
+	<!--REQUIRED SCRIPT-->
+
+</head>
+<body>
+	
+	<a href="http://plate.kuzenko.net/config.php" class="config"><img src="demo_files/img/config.png" alt=""/></a>
+	<div class="demoLight">
+		<div class="demoPlate pl1"></div>
+	</div>
+
+	
+
+	<!--from demo-->
+		<link rel="stylesheet" href="demo_files/css/plateDemo.css">
+		<script src="demo_files/js/jquery.easing.1.3.js"></script>
+		<script src="demo_files/js/plateDemo.js"></script>
+	<!--from demo-->	
+</body>
+</html>
